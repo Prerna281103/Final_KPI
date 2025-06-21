@@ -575,7 +575,6 @@ from services.Unboxing_review import get_unboxing_sentiment_chart
 from services.Digital_Payment import generate_payment_issues_chart
 from services.Gift_card_mention import create_user_type_pie_chart 
 from services.food_hack import generate_hacktype_bar_chart
-from services.cultural_discussion import generate_contextual_indicators_chart
 from services.Variety_information import generate_information_overload_chart
 from services.online_influence import generate_influence_chart
 from services.Price_increase_reactions import load_reactions, create_pie_chart
@@ -615,7 +614,7 @@ def get_mobile_desktop_chart():
 
 @app.get("/I4/high-intent-keyword-trend")
 def high_intent_keyword_trend():
-    buf = generate_high_intent_keyword_trend_chart("KPI_Data/Keyword_performance.csv")
+    buf = generate_high_intent_keyword_trend_chart("KPI_Data/Keyword_Performance.csv")
     return StreamingResponse(buf, media_type="image/png")
 
 @app.get("/I3/brand-switching", response_class=FileResponse)
@@ -644,7 +643,7 @@ def health_awareness_chart():
 
 @app.get("/I17/recipe-usage")
 def recipe_usage_chart():
-    img_bytes = get_recipe_usage_figure_bytes("KPI_Data/recipe_integration_mentions.csv")
+    img_bytes = get_recipe_usage_figure_bytes("KPI_Data/Recipe_Integration_Mentions.csv")
     return StreamingResponse(io.BytesIO(img_bytes), media_type="image/png")
 
 @app.get("/I18/homemade-vs-local", response_class=StreamingResponse)
@@ -686,7 +685,7 @@ def influence_analysis():
 
 @app.get("/I30/price-increase-sentiment")
 def price_increase_sentiment_chart():
-    labels, sizes = load_reactions("KPI_Data/price_increase_reactions.csv")
+    labels, sizes = load_reactions("KPI_Data/Price_increase_Reactions.csv")
     buf = create_pie_chart(labels, sizes)
     return StreamingResponse(buf, media_type="image/png")
 

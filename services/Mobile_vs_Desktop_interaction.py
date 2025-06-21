@@ -9,7 +9,7 @@ from fastapi import HTTPException
 
 def generate_mobile_desktop_bar_chart():
     try:
-        csv_path = Path("KPI_Data") / "Mobile_vs_Desktop_Interaction.csv"
+        csv_path = Path("KPI_Data") / "Mobile_vs_Desktop_interaction.csv"
 
         # Check if CSV exists
         if not csv_path.exists():

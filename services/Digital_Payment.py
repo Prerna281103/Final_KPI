@@ -7,7 +7,7 @@ from pathlib import Path
 from fastapi.responses import StreamingResponse
 from fastapi import HTTPException
 
-def generate_payment_issues_chart(csv_path=Path("KPI_data") / "Digital_Payment_feedback.csv"):
+def generate_payment_issues_chart(csv_path=Path("KPI_data") / "Digital_Payment_Feedback.csv"):
     try:
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")

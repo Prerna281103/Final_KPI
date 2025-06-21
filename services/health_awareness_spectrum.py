@@ -9,7 +9,7 @@ import io
 
 def get_health_awareness_chart():
     try:
-        csv_path = Path("KPI_Data") / "health_spectrum.csv"
+        csv_path = Path("KPI_Data") / "Health_Spectrum.csv"
 
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV not found at: {csv_path}")

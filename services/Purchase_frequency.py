@@ -9,7 +9,7 @@ from fastapi import HTTPException
 def generate_purchase_frequency_chart():
     try:
         # Safe paths
-        csv_path = Path("KPI_Data") / "purchase_frequency.csv"
+        csv_path = Path("KPI_Data") / "Purchase_Frequency.csv"
         chart_dir = Path("static") / "charts"
         chart_path = chart_dir / "purchase_frequency_mentions.png"
 

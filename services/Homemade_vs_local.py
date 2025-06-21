@@ -9,7 +9,7 @@ from fastapi import HTTPException
 
 def create_chart_image():
     try:
-        csv_path = Path("KPI_Data") / "homemade_vs_local_comparison.csv"
+        csv_path = Path("KPI_Data") / "Homemade_vs_Local_Comparison.csv"
 
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")

@@ -9,7 +9,7 @@ from fastapi import HTTPException
 
 def generate_impulse_kpi_chart():
     try:
-        csv_path = Path("KPI_Data") / "impulse_purchase_Mentions.csv"
+        csv_path = Path("KPI_Data") / "Impulse_Purchase_Mentions.csv"
 
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")

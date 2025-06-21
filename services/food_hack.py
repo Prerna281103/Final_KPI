@@ -7,7 +7,7 @@ from pathlib import Path
 from fastapi.responses import StreamingResponse
 from fastapi import HTTPException
 
-def generate_hacktype_bar_chart(csv_path=Path("KPI_data") / "food_hack_mentions.csv"):
+def generate_hacktype_bar_chart(csv_path=Path("KPI_data") / "Food_Hack_Mentions.csv"):
     try:
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")

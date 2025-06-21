@@ -7,7 +7,7 @@ from pathlib import Path
 from fastapi.responses import StreamingResponse
 from fastapi import HTTPException
 
-CSV_PATH = Path("KPI_Data") / "Gift_card_mentions.csv"
+CSV_PATH = Path("KPI_Data") / "Gift_Card_Mentions.csv"
 
 def create_user_type_pie_chart():
     try:

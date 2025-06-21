@@ -8,7 +8,7 @@ from pathlib import Path
 def community_engagement_chart():
     try:
         # Paths
-        csv_path = Path("KPI_data") / "community_engagement.csv"
+        csv_path = Path("KPI_data") / "Community_Engagement.csv"
         chart_dir = Path("static") / "charts"
         chart_path = chart_dir / "community_engagement.png"
 

@@ -9,7 +9,7 @@ from pathlib import Path
 def get_platform_funnel_kpi_chart():
     try:
         # Use pathlib for cross-platform compatibility
-        csv_path = Path("KPI_Data") / "platform_role.csv"
+        csv_path = Path("KPI_Data") / "Platform_role.csv"
         chart_dir = Path("static") / "charts"
         chart_path = chart_dir / "platform_funnel_kpi_chart.png"
 

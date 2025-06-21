@@ -8,7 +8,7 @@ from pathlib import Path
 from fastapi import HTTPException
 
 def generate_information_overload_chart():
-    csv_path = Path("KPI_data") / "Feedback_for_variety.csv"
+    csv_path = Path("KPI_data") / "Feedback_For_Variety.csv"
     if not csv_path.exists():
         raise HTTPException(status_code=404, detail=f"CSV file not found at: {csv_path}")
 
