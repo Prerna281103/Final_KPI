@@ -6,7 +6,7 @@ from pathlib import Path
 from fastapi.responses import StreamingResponse
 from fastapi import HTTPException
 
-CSV_PATH = Path("KPI_data") / "Unboxing_Experience.csv"
+CSV_PATH = Path("KPI_Data") / "Unboxing_Experience.csv"
 
 def load_review_sentiments():
     if not CSV_PATH.exists():

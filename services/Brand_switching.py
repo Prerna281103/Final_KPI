@@ -9,7 +9,7 @@ from fastapi import HTTPException
 def generate_switch_trigger_chart():
     try:
         # Define safe paths
-        csv_path = Path("KPI_data") / "Brand_Switching_Triggers.csv"
+        csv_path = Path("KPI_Data") / "Brand_Switching_Triggers.csv"
         chart_dir = Path("static") / "charts"
         chart_path = chart_dir / "brand_switching_triggers.png"
 
