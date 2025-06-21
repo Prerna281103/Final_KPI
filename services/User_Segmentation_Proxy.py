@@ -8,7 +8,7 @@ from pathlib import Path
 def user_segmentation_proxy() -> Response:
     try:
         # 1️⃣ Define paths safely
-        data_path = Path("KPI_Data") / "user_segmentation_proxy.csv"
+        data_path = Path("KPI_data") / "user_segmentation_proxy.csv"
         chart_dir = Path("static") / "charts"
         chart_path = chart_dir / "user_segmentation.png"
 

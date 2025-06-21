@@ -6,8 +6,8 @@ app = FastAPI()
 router = APIRouter()
 
 # ✅ File paths
-INSTAGRAM_FILE = "C_Physical_CSV/Instagram.csv"
-TWITTER_FILE = "C_Physical_CSV/Twitter.csv"
+INSTAGRAM_FILE = "D_Physical_CSV/Instagram.csv"
+TWITTER_FILE = "D_Physical_CSV/Twitter.csv"
 
 # ✅ Keyword listsfrom fastapi import APIRouter, FastAPI
 from fastapi.responses import JSONResponse
@@ -17,8 +17,8 @@ app = FastAPI()
 router = APIRouter()
 
 # ✅ File paths
-INSTAGRAM_FILE = "C_Physical_CSV/Instagram.csv"
-TWITTER_FILE = "C_Physical_CSV/Twitter.csv"
+INSTAGRAM_FILE = "D_Physical_CSV/Instagram.csv"
+TWITTER_FILE = "D_Physical_CSV/Twitter.csv"
 
 # ✅ Keyword lists
 indian_metros = ['Mumbai', 'Delhi', 'Bangalore', 'Hyderabad', 'Chennai', 'Kolkata', 'Pune']

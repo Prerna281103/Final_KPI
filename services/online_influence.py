@@ -34,7 +34,7 @@ def classify_influence(text):
                 return influence
     return 'Others'
 
-def generate_influence_chart(csv_path="KPI_Data/online_influence.csv"):
+def generate_influence_chart(csv_path="KPI_Data/Online_influence.csv"):
     csv_file = Path(csv_path)
     if not csv_file.exists():
         raise HTTPException(status_code=404, detail=f"CSV file not found at: {csv_file}")

@@ -21,7 +21,7 @@ def get_sentiment(text: str) -> str:
 @router.get("/execute_kpi12/")
 async def analyze_kpi12_sentiment():
     try:
-        csv_path = "C_Physical_CSV/KPI12.csv"
+        csv_path = "D_Physical_CSV/KPI12.csv"
 
         # ✅ Check if file exists
         if not os.path.exists(csv_path):

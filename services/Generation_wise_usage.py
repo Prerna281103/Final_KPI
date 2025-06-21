@@ -9,7 +9,7 @@ from fastapi import HTTPException
 
 def generate_cross_generation_chart():
     try:
-        csv_path = Path("KPI_Data") / "generation_wise_consumption.csv"
+        csv_path = Path("KPI_Data") / "Generation_wise_consumption.csv"
 
         if not csv_path.exists():
             raise FileNotFoundError(f"CSV file not found at: {csv_path}")

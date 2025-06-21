@@ -553,7 +553,7 @@ from fastapi import FastAPI, Response
 from fastapi.responses import StreamingResponse
 from fastapi.responses import FileResponse
 from services.basket_composition_service import get_basket_composition_chart
-from services.Influence_Attribution import generate_mentions_by_platform_image
+from services.Influence_Attribution import generate_mentions_by_platform_json
 from services.Trust_Analysis import generate_trust_analysis_plot
 from services.Search_Behaviour_Evolution import generate_search_behavior_evolution_chart
 from services.Community_Engagement import community_engagement_chart
@@ -580,14 +580,14 @@ from services.Variety_information import generate_information_overload_chart
 from services.online_influence import generate_influence_chart
 from services.Price_increase_reactions import load_reactions, create_pie_chart
 
+
 @app.get("/I10/basket-composition", response_class=StreamingResponse)
 def basket_chart():
     return get_basket_composition_chart()
 
-@app.get("/I-11_Influence-Attribution-Guesses")
-def influence_platform_mentions():
-    img_buf = generate_mentions_by_platform_image()
-    return StreamingResponse(img_buf, media_type="image/png")
+@app.get("/I11/influence-mentions-json")
+def get_json_output():
+    return generate_mentions_by_platform_json()
 
 @app.get("/I28/search-behavior", response_class=StreamingResponse)
 def search_behavior_chart():
@@ -596,10 +596,6 @@ def search_behavior_chart():
 @app.get("/I27/trust-analysis", response_class=StreamingResponse)
 def trust_analysis_chart():
     return generate_trust_analysis_plot()
-
-@app.get("/I26/post-purchase-dissonance", response_class=StreamingResponse)
-def post_purchase_dissonance_chart():
-    return get_post_purchase_dissonance_chart()
 
 @app.get("/I8/community-engagement", response_class=Response)
 def get_community_engagement_chart():
@@ -619,7 +615,7 @@ def get_mobile_desktop_chart():
 
 @app.get("/I4/high-intent-keyword-trend")
 def high_intent_keyword_trend():
-    buf = generate_high_intent_keyword_trend_chart("KPI_Data/Keyword_Performance.csv")
+    buf = generate_high_intent_keyword_trend_chart("KPI_Data/Keyword_performance.csv")
     return StreamingResponse(buf, media_type="image/png")
 
 @app.get("/I3/brand-switching", response_class=FileResponse)
@@ -634,7 +630,7 @@ def platform_funnel_chart():
 def get_purchase_frequency_chart():
     return generate_purchase_frequency_chart()
 
-@app.get("/I12/Return-issue-type", response_class=StreamingResponse)
+@app.get("/I12/issue-type", response_class=StreamingResponse)
 def issue_type_chart():
     return generate_issue_type_chart()
 
@@ -663,7 +659,7 @@ def get_impulse_kpi_chart():
 def get_unboxing_chart():
     return get_unboxing_sentiment_chart()
 
-@app.get("/I21/payment-issues", response_class=StreamingResponse)
+@app.get("/I20/payment-issues", response_class=StreamingResponse)
 def payment_issues_chart():
     return generate_payment_issues_chart()
 
@@ -674,6 +670,11 @@ def gift_card_user_type():
 @app.get("/I23/hacktype-chart", response_class=StreamingResponse)
 def hacktype_chart():
     return generate_hacktype_bar_chart()
+
+
+@app.get("/I9/post-purchase-dissonance", response_class=StreamingResponse)
+def post_purchase_dissonance_chart():
+    return get_post_purchase_dissonance_chart()
 
 @app.get("/I25/information-overload", response_class=StreamingResponse)
 def information_overload_chart():

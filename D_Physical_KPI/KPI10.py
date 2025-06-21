@@ -8,7 +8,7 @@ router = APIRouter()
 
 @router.get("/execute_kpi15/")
 async def execute_kpi15():
-    file_path = r"C_Physical_CSV\KPI15.csv"  # Update path as per your folder structure
+    file_path = r"D_Physical_CSV\KPI15.csv"  # Update path as per your folder structure
     try:
         # Check if file exists
         if not os.path.exists(file_path):

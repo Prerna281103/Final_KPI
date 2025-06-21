@@ -5,7 +5,7 @@ import os
 
 router = APIRouter()
 
-FILE_PATH = "C_Physical_CSV/KPI11.csv"  # Assuming it's a .tsv file with .csv extension
+FILE_PATH = "D_Physical_CSV/KPI11.csv"  # Assuming it's a .tsv file with .csv extension
 
 @router.get("/kpi11-sentiment-summary")
 async def sentiment_summary():

@@ -38,3 +38,5 @@ def create_pie_chart(labels, sizes):
     plt.close()
     buf.seek(0)
     return buf
+
+

@@ -9,7 +9,7 @@ router = APIRouter()
 @router.get("/execute_kpi13/")
 async def execute_kpi13():
     try:
-        csv_path = "C_Physical_CSV/KPI13.csv"
+        csv_path = "D_Physical_CSV/KPI13.csv"
 
         # ✅ File existence check
         if not os.path.exists(csv_path):

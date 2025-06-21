@@ -12,7 +12,7 @@ router = APIRouter()
 async def execute_kpi_loyalty():
     try:
         # Path to CSV file
-        csv_path = "C_Physical_CSV/KPI14.csv"
+        csv_path = "D_Physical_CSV/KPI14.csv"
 
         # ✅ Check if file exists
         if not os.path.exists(csv_path):

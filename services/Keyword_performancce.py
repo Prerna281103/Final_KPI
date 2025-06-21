@@ -28,3 +28,5 @@ def generate_high_intent_keyword_trend_chart(csv_path):
     plt.close()
     buf.seek(0)
     return buf
+
+

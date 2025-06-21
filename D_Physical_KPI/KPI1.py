@@ -4,7 +4,7 @@ import pandas as pd
 
 router = APIRouter()
 
-FILE_PATH = "C_Physical_CSV/KPI1.csv"  # Update path based on your project structure
+FILE_PATH = "D_Physical_CSV/KPI1.csv"  # Update path based on your project structure
 
 @router.get("/rising-search-queries")
 async def get_rising_queries():

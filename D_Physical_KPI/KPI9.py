@@ -4,7 +4,7 @@ import pandas as pd
 
 router = APIRouter()
 
-FILE_PATH = "C_Physical_CSV/KPI9.csv"
+FILE_PATH = "D_Physical_CSV/KPI9.csv"
 
 @router.get("/kpi9-observed-terms")
 async def list_observed_terms():

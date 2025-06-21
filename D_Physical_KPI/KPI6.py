@@ -6,7 +6,7 @@ app = FastAPI()
 router = APIRouter()
 
 # Path to your KPI 6 CSV file
-FILE_PATH = "C_Physical_CSV/KPI6.csv"
+FILE_PATH = "D_Physical_CSV/KPI6.csv"
 
 @router.get("/platform-summary")
 async def platform_usage_summary():

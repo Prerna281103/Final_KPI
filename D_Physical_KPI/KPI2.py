@@ -7,7 +7,7 @@ from io import BytesIO
 app = FastAPI()
 router = APIRouter()
 
-FILE_PATH = "C_Physical_CSV/KPI2.csv"
+FILE_PATH = "D_Physical_CSV/KPI2.csv"
 
 @router.get("/generate-graph")
 async def generate_graph():

@@ -8,7 +8,7 @@ app = FastAPI()
 router = APIRouter()
 
 # ✅ Your CSV path
-FILE_PATH = "C_Physical_CSV/KPI4.csv"
+FILE_PATH = "D_Physical_CSV/KPI4.csv"
 
 @router.get("/kpi4-psychographic-themes")
 async def generate_kpi4_graph():

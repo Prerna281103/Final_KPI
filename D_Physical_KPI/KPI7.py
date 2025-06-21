@@ -6,7 +6,7 @@ app = FastAPI()
 router = APIRouter()
 
 # File path
-FILE_PATH = "C_Physical_CSV/KPI7.csv"
+FILE_PATH = "D_Physical_CSV/KPI7.csv"
 
 @router.get("/comparison-points")
 async def get_comparison_points():

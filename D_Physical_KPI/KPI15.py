@@ -10,7 +10,7 @@ app.include_router(router)
 @router.get("/execute_kpi_gifting/")
 async def execute_kpi_gifting():
     try:
-        csv_path = "C_Physical_CSV/KPI15.csv"
+        csv_path = "D_Physical_CSV/KPI15.csv"
 
         # ✅ Check if file exists
         if not os.path.isfile(csv_path):
